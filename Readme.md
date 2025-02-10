@@ -45,9 +45,9 @@ An artificial intelligence agent to monitor wind turbine data and help the engin
 ### Wind Farm Simulation Server with Kepware
 1. Create an EC2 instance with Windows OS and connect it through RDP.
 
-2. Register with Kepware and Download a demo version.
+2. Register with Kepware and Download a demo version. You can download kepware from [here] (https://www.ptc.com/en/products/kepware/kepserverex/demo-download). 
 
-3. Install the Kepware OPC Server with Simulation Driver.
+3. Install the Kepware OPC Server with Simulation Driver. The link for simulation driver manual is [here] (https://ptc-p-001.sitecorecontenthub.cloud/api/public/content/c9b106bdb66142118da45e07b7be08fe?v=91c9535b&_gl=1*i3jyj5*_gcl_au*NzY1OTEwNzM2LjE3MzkxOTgwNTc.*_ga*NzkwNTQ1NjcyLjE3MzkxOTgwNTc.*_ga_7NMP2MSYPM*MTczOTE5ODA1Ni4xLjEuMTczOTE5ODE1MC4zOC4wLjA.)
 
 4. Once setup is done load the OPF project file downloaded from the repo. The project will look like below, one channel per wind farm.
 ![alt text](https://github.com/getramki/Integrating-Gen-IA-and-IoT/blob/main/images/kepware-opc-project.png?raw=true)
@@ -64,7 +64,7 @@ An artificial intelligence agent to monitor wind turbine data and help the engin
 
 
 ### Setup - IoT SiteWise
-1. Create an SiteWise Edge Gateway as described here. Download the Edge Gateway installer and upload it to the Windows EC2 Kepware OPC Server Instance. Execute the Gateway Installer, this will install the necessary certificate to communicate to SiteWise Edge Gateway on AWS.
+1. Create an SiteWise Edge Gateway as described [here] (https://docs.aws.amazon.com/iot-sitewise/latest/userguide/create-gateway-ggv2.html). Download the Edge Gateway installer and upload it to the Windows EC2 Kepware OPC Server Instance. Execute the Gateway Installer, this will install the necessary certificate to communicate to SiteWise Edge Gateway on AWS.
 
 2. In the IoT SiteWise Console under bulk operations use New Import to import the Project JSON file from the repo.
 
@@ -89,11 +89,11 @@ An artificial intelligence agent to monitor wind turbine data and help the engin
 ![alt text](https://github.com/getramki/Integrating-Gen-IA-and-IoT/blob/main/images/iot-sitewise-live-data.png?raw=true)
 
 ### Build Agent in Amazon Bedrock
-1. Create an S3 bucket and upload the Sample-Wind-Turbine-Maintenance-Guide.docx from the repo and Build Knowledge Base for Amazon Bedrock with the file in S3 bucket as Data Source as mentioned in the AWS documentation here.
+1. Create an S3 bucket and upload the Sample-Wind-Turbine-Maintenance-Guide.docx from the repo and Build Knowledge Base for Amazon Bedrock with the file in S3 bucket as Data Source as mentioned in the AWS documentation [here] (https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-build.html).
 
 2. Download the Lambda functions in the repo and you can deploy with the SAM template associated with the function in same folder or you create the function manually with latest python runtime and uploading the code.
 
-3. Build the Agent in Amazon Bedrock Console as mentioned in the documentation here and create the action groups as per below screen shots, associate the replated Lambda functions to the Actions by mentioning Lambda Function ARNs. The model used is Clude 3 Haiku v1.
+3. Build the Agent in Amazon Bedrock Console as mentioned in the documentation [here] (https://docs.aws.amazon.com/bedrock/latest/userguide/agents-build-modify.html) and create the action groups as per below screen shots, associate the replated Lambda functions to the Actions by mentioning Lambda Function ARNs. The model used is Clude 3 Haiku v1.
 ![alt text](https://github.com/getramki/Integrating-Gen-IA-and-IoT/blob/main/images/agent-config.png?raw=true)
 
 4. Action for Reading Power and Wind Speed of a Wind Turbine by giving Wind Turbine ID and Wind Farm Name as Input Parameters.
