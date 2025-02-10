@@ -55,9 +55,9 @@ A company in the wind energy industry is facing several challenges in managing a
 6. Setup OPC Configuration as below, you access it from taskbar right click Kepware Icon.
 ![alt text](https://github.com/getramki/Integrating-Gen-IA-and-IoT/blob/main/images/kepware-access-opc-ua-config.png?raw=true)
 
-![alt text](https://github.com/getramki/Integrating-Gen-IA-and-IoT/blob/main/images/images/opc-ua-config-1.png?raw=true)
+![alt text](https://github.com/getramki/Integrating-Gen-IA-and-IoT/blob/main/images/opc-ua-config-1.png?raw=true)
 
-![alt text](https://github.com/getramki/Integrating-Gen-IA-and-IoT/blob/main/images/images/opc-ua-config-2.png?raw=true)
+![alt text](https://github.com/getramki/Integrating-Gen-IA-and-IoT/blob/main/images/opc-ua-config-2.png?raw=true)
 
 
 ### Setup - IoT SiteWise
