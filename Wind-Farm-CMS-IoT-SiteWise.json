@@ -1,0 +1,3885 @@
+{
+  "assetModels" : [ {
+    "assetModelId" : "b9bd24b9-9e35-4cff-b460-2a28d230d0a0",
+    "assetModelName" : "CMS",
+    "assetModelDescription" : "Central Monitoring System",
+    "assetModelProperties" : [ {
+      "id" : "0171f5b1-7f23-44a2-b0b6-602ef7e3baed",
+      "name" : "Total Average Power",
+      "dataType" : "INTEGER",
+      "type" : {
+        "attribute" : {
+          "defaultValue" : "30"
+        }
+      }
+    }, {
+      "id" : "9ae6b700-f7de-4af3-9362-30b9c4c8e848",
+      "name" : "Average_power",
+      "dataType" : "DOUBLE",
+      "unit" : "watt",
+      "type" : {
+        "metric" : {
+          "expression" : "var0",
+          "variables" : [ {
+            "name" : "var0",
+            "value" : {
+              "propertyId" : "0171f5b1-7f23-44a2-b0b6-602ef7e3baed"
+            }
+          } ],
+          "window" : {
+            "tumbling" : {
+              "interval" : "1m"
+            }
+          }
+        }
+      }
+    }, {
+      "id" : "d53d96cd-8228-4923-9e70-983979f2628e",
+      "name" : "Name",
+      "dataType" : "STRING",
+      "type" : {
+        "attribute" : {
+          "defaultValue" : "CMS"
+        }
+      }
+    } ],
+    "assetModelCompositeModels" : [ ],
+    "assetModelHierarchies" : [ {
+      "id" : "38781b7d-2270-4cd9-a61a-bc3759ca8ed1",
+      "name" : "Wind Farm",
+      "childAssetModelId" : "125c7c70-7a18-4544-b070-3eef76957d6c"
+    } ],
+    "tags" : [ ]
+  }, {
+    "assetModelId" : "125c7c70-7a18-4544-b070-3eef76957d6c",
+    "assetModelName" : "WindFarm",
+    "assetModelProperties" : [ {
+      "id" : "34a50a2f-286e-4808-8f4c-6051328a6491",
+      "name" : "Name",
+      "dataType" : "STRING",
+      "type" : {
+        "attribute" : {
+          "defaultValue" : "Wind Farm"
+        }
+      }
+    }, {
+      "id" : "d93f586e-7862-4a93-8037-61fa9674babe",
+      "name" : "Location",
+      "dataType" : "STRING",
+      "type" : {
+        "attribute" : {
+          "defaultValue" : "Place"
+        }
+      }
+    } ],
+    "assetModelCompositeModels" : [ ],
+    "assetModelHierarchies" : [ {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "name" : "Wind Turbine Generator",
+      "childAssetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+      "childAssetModelExternalId" : "Wind-Turbine-Model-123"
+    } ],
+    "tags" : [ ]
+  }, {
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetModelName" : "WTG",
+    "assetModelDescription" : "Wind Turbine Generator",
+    "assetModelProperties" : [ {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "name" : "RotorSpeed",
+      "dataType" : "DOUBLE",
+      "unit" : "rpm",
+      "type" : {
+        "measurement" : { }
+      }
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "name" : "ErrorCode",
+      "dataType" : "INTEGER",
+      "type" : {
+        "measurement" : { }
+      }
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "name" : "AmbientTemp",
+      "dataType" : "DOUBLE",
+      "unit" : "celsius",
+      "type" : {
+        "measurement" : { }
+      }
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "name" : "ErrorStatus",
+      "dataType" : "BOOLEAN",
+      "type" : {
+        "measurement" : { }
+      }
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "name" : "WindDirection",
+      "dataType" : "DOUBLE",
+      "unit" : "degree",
+      "type" : {
+        "measurement" : { }
+      }
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "name" : "ActivePower",
+      "dataType" : "DOUBLE",
+      "unit" : "kw",
+      "type" : {
+        "measurement" : { }
+      }
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "name" : "WindSpeed",
+      "dataType" : "DOUBLE",
+      "unit" : "m/sec",
+      "type" : {
+        "measurement" : { }
+      }
+    }, {
+      "id" : "a26e3def-2f13-4961-b490-43c2db8873b1",
+      "name" : "Model",
+      "dataType" : "STRING",
+      "type" : {
+        "attribute" : {
+          "defaultValue" : "WTG123"
+        }
+      }
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "name" : "Energy",
+      "dataType" : "DOUBLE",
+      "unit" : "kwh",
+      "type" : {
+        "measurement" : { }
+      }
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "name" : "BearingTemp",
+      "dataType" : "DOUBLE",
+      "unit" : "celsius",
+      "type" : {
+        "measurement" : { }
+      }
+    }, {
+      "id" : "c582a517-520d-440c-ad38-d54a777e1f80",
+      "name" : "Name",
+      "dataType" : "STRING",
+      "type" : {
+        "attribute" : {
+          "defaultValue" : "WTG"
+        }
+      }
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "name" : "GearBoxVibration",
+      "dataType" : "DOUBLE",
+      "unit" : "mm/sec",
+      "type" : {
+        "measurement" : { }
+      }
+    } ],
+    "assetModelCompositeModels" : [ ],
+    "assetModelHierarchies" : [ ],
+    "tags" : [ ]
+  } ],
+  "assets" : [ {
+    "assetId" : "5a292451-10c0-498d-b5c2-52e6a4973950",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-08",
+    "assetProperties" : [ {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Bethel/WTG-08/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Bethel/WTG-08/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Bethel/WTG-08/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Bethel/WTG-08/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Bethel/WTG-08/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Bethel/WTG-08/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Bethel/WTG-08/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Bethel/WTG-08/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Bethel/WTG-08/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Bethel/WTG-08/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "f2660283-e633-44e0-821a-862da528859c",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-05",
+    "assetProperties" : [ {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Fenton/WTG-05/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Fenton/WTG-05/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Fenton/WTG-05/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Fenton/WTG-05/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Fenton/WTG-05/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Fenton/WTG-05/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Fenton/WTG-05/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Fenton/WTG-05/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Fenton/WTG-05/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Fenton/WTG-05/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "c0fb6257-e84b-48de-87dc-5c521d799f22",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-05",
+    "assetProperties" : [ {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Adair/WTG-05/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Adair/WTG-05/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Adair/WTG-05/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Adair/WTG-05/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Adair/WTG-05/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Adair/WTG-05/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Adair/WTG-05/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Adair/WTG-05/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Adair/WTG-05/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Adair/WTG-05/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "69be9413-f829-41c7-bddb-aae179ed05f5",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-01",
+    "assetProperties" : [ {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Deerfield/WTG-01/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Deerfield/WTG-01/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Deerfield/WTG-01/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Deerfield/WTG-01/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Deerfield/WTG-01/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Deerfield/WTG-01/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Deerfield/WTG-01/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Deerfield/WTG-01/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Deerfield/WTG-01/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Deerfield/WTG-01/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "ef8c4b04-e3c4-4aa6-9227-aaad0972acfb",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-10",
+    "assetProperties" : [ {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/CampSprings/WTG-10/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/CampSprings/WTG-10/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/CampSprings/WTG-10/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/CampSprings/WTG-10/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/CampSprings/WTG-10/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/CampSprings/WTG-10/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/CampSprings/WTG-10/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/CampSprings/WTG-10/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/CampSprings/WTG-10/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/CampSprings/WTG-10/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "465ac8ae-e1c8-4fd3-844d-eb2197198c7c",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-10",
+    "assetProperties" : [ {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Fenton/WTG-10/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Fenton/WTG-10/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Fenton/WTG-10/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Fenton/WTG-10/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Fenton/WTG-10/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Fenton/WTG-10/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Fenton/WTG-10/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Fenton/WTG-10/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Fenton/WTG-10/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Fenton/WTG-10/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "a2059c4b-da7d-41db-80ed-0f10d90ff63f",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-10",
+    "assetProperties" : [ {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/PleasantValley/WTG-10/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/PleasantValley/WTG-10/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/PleasantValley/WTG-10/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/PleasantValley/WTG-10/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/PleasantValley/WTG-10/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/PleasantValley/WTG-10/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/PleasantValley/WTG-10/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/PleasantValley/WTG-10/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/PleasantValley/WTG-10/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/PleasantValley/WTG-10/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "bfd643a1-5e45-44f6-a8dd-3e4a1885106a",
+    "assetModelId" : "125c7c70-7a18-4544-b070-3eef76957d6c",
+    "assetName" : "Adair",
+    "assetProperties" : [ ],
+    "assetHierarchies" : [ {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "3e12cd38-cb2e-4a46-b6e9-ddfb6bed74ed"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "4ab8bf20-defd-46f1-b32f-75a54f492332"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "ea968cfe-1d5e-4671-8c94-8f4710e6f773"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "c4fe0a2c-36ab-4639-85d3-268b85ff1c23"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "0dcd9d0f-3c9f-4ba2-ac4c-b9e8bf010961"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "2354a8a4-baab-4baa-9c4d-3e68cfc9b431"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "c0fb6257-e84b-48de-87dc-5c521d799f22"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "5e794219-3f8f-4227-9d34-b5f922554f6b"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "fb9d569f-5f34-4798-8eb6-67e4ed334701"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "c0d68a37-7657-400f-809e-aa6ee93b7c04"
+    } ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "503b506a-efa6-4eb1-b364-caf3ab4b75b8",
+    "assetModelId" : "125c7c70-7a18-4544-b070-3eef76957d6c",
+    "assetName" : "PleasantValley",
+    "assetProperties" : [ ],
+    "assetHierarchies" : [ {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "03d97605-6b6c-461e-9333-0d0678c6211f"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "2df2258d-4009-47aa-9b86-e237f164826b"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "51cda019-389b-41ef-9d6e-cee47e11e7c6"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "2124d86e-1b72-474e-9d1b-be177aa822f9"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "ac9fee03-215a-405e-814b-d7150c58e070"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "a2059c4b-da7d-41db-80ed-0f10d90ff63f"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "b7a922f2-aee4-44f2-b207-15617b11bb18"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "7fe6d1a0-8fde-49fe-bde4-2336743d2cb6"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "b22cc8a4-04f7-4f37-bc6c-623c3a7750eb"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "9147aa42-97b3-44b3-8801-1a145d4e1036"
+    } ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "3e12cd38-cb2e-4a46-b6e9-ddfb6bed74ed",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-06",
+    "assetProperties" : [ {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Adair/WTG-06/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Adair/WTG-06/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Adair/WTG-06/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Adair/WTG-06/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Adair/WTG-06/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Adair/WTG-06/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Adair/WTG-06/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Adair/WTG-06/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Adair/WTG-06/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Adair/WTG-06/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "b275f19e-8fb9-409c-b688-672a4bdbf0b3",
+    "assetModelId" : "125c7c70-7a18-4544-b070-3eef76957d6c",
+    "assetName" : "Deerfield",
+    "assetProperties" : [ ],
+    "assetHierarchies" : [ {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "bd05e9a9-686f-4005-a800-06d2c42a0544"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "3e50c622-42ae-417f-b820-14b776bf6de2"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "09be53bf-41d9-4d81-9002-c4b4a3b5d427"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "b97993cf-2347-4c11-9f45-1b072f8513d7"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "17d1a67b-d1e6-4696-a963-df82b99e0c04"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "cd73447f-36c6-4383-bb54-b4dddcce76e0"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "69be9413-f829-41c7-bddb-aae179ed05f5"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "9e3584dd-c466-45a8-b34c-6dae1a533617"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "329929b7-7a77-4b07-aa2d-f8f1301decaa"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "ec3caac5-2623-4112-ae0d-58babc0901ad"
+    } ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "329929b7-7a77-4b07-aa2d-f8f1301decaa",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-07",
+    "assetProperties" : [ {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Deerfield/WTG-07/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Deerfield/WTG-07/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Deerfield/WTG-07/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Deerfield/WTG-07/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Deerfield/WTG-07/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Deerfield/WTG-07/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Deerfield/WTG-07/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Deerfield/WTG-07/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Deerfield/WTG-07/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Deerfield/WTG-07/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "bae35aff-110e-46f6-b20b-c10f4efd79ac",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-06",
+    "assetProperties" : [ {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Fenton/WTG-06/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Fenton/WTG-06/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Fenton/WTG-06/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Fenton/WTG-06/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Fenton/WTG-06/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Fenton/WTG-06/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Fenton/WTG-06/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Fenton/WTG-06/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Fenton/WTG-06/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Fenton/WTG-06/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "27b94f7b-6754-4229-a68f-cbffebd6e797",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-02",
+    "assetProperties" : [ {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Fenton/WTG-02/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Fenton/WTG-02/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Fenton/WTG-02/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Fenton/WTG-02/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Fenton/WTG-02/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Fenton/WTG-02/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Fenton/WTG-02/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Fenton/WTG-02/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Fenton/WTG-02/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Fenton/WTG-02/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "d799e41d-e19b-4911-adc9-259d2e10d875",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-01",
+    "assetProperties" : [ {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "DISABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "DISABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "DISABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "DISABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "DISABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "DISABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "DISABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "DISABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "2124d86e-1b72-474e-9d1b-be177aa822f9",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-08",
+    "assetProperties" : [ {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/PleasantValley/WTG-08/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/PleasantValley/WTG-08/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/PleasantValley/WTG-08/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/PleasantValley/WTG-08/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/PleasantValley/WTG-08/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/PleasantValley/WTG-08/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/PleasantValley/WTG-08/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/PleasantValley/WTG-08/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/PleasantValley/WTG-08/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/PleasantValley/WTG-08/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "08a1822c-2d5f-42c5-a747-d19376a56d98",
+    "assetModelId" : "b9bd24b9-9e35-4cff-b460-2a28d230d0a0",
+    "assetName" : "CMS",
+    "assetProperties" : [ {
+      "id" : "9ae6b700-f7de-4af3-9362-30b9c4c8e848",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "DISABLED"
+    } ],
+    "assetHierarchies" : [ {
+      "id" : "38781b7d-2270-4cd9-a61a-bc3759ca8ed1",
+      "childAssetId" : "bfd643a1-5e45-44f6-a8dd-3e4a1885106a"
+    }, {
+      "id" : "38781b7d-2270-4cd9-a61a-bc3759ca8ed1",
+      "childAssetId" : "b275f19e-8fb9-409c-b688-672a4bdbf0b3"
+    }, {
+      "id" : "38781b7d-2270-4cd9-a61a-bc3759ca8ed1",
+      "childAssetId" : "ff7bd48f-ad4c-4cd6-9245-991358ecaff6"
+    }, {
+      "id" : "38781b7d-2270-4cd9-a61a-bc3759ca8ed1",
+      "childAssetId" : "f81ca0f4-0c06-493a-8c70-12e54a6fe64b"
+    }, {
+      "id" : "38781b7d-2270-4cd9-a61a-bc3759ca8ed1",
+      "childAssetId" : "f9492fb0-f54f-4b0f-a34c-e3a2b930d370"
+    }, {
+      "id" : "38781b7d-2270-4cd9-a61a-bc3759ca8ed1",
+      "childAssetId" : "503b506a-efa6-4eb1-b364-caf3ab4b75b8"
+    } ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "17d1a67b-d1e6-4696-a963-df82b99e0c04",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-09",
+    "assetProperties" : [ {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Deerfield/WTG-09/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Deerfield/WTG-09/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Deerfield/WTG-09/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Deerfield/WTG-09/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Deerfield/WTG-09/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Deerfield/WTG-09/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Deerfield/WTG-09/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Deerfield/WTG-09/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Deerfield/WTG-09/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Deerfield/WTG-09/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "b5e803cc-8a8e-419a-99cd-6148bc082f2b",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-02",
+    "assetProperties" : [ {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/CampSprings/WTG-02/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/CampSprings/WTG-02/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/CampSprings/WTG-02/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/CampSprings/WTG-02/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/CampSprings/WTG-02/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/CampSprings/WTG-02/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/CampSprings/WTG-02/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/CampSprings/WTG-02/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/CampSprings/WTG-02/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/CampSprings/WTG-02/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "3e50c622-42ae-417f-b820-14b776bf6de2",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-02",
+    "assetProperties" : [ {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Deerfield/WTG-02/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Deerfield/WTG-02/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Deerfield/WTG-02/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Deerfield/WTG-02/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Deerfield/WTG-02/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Deerfield/WTG-02/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Deerfield/WTG-02/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Deerfield/WTG-02/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Deerfield/WTG-02/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Deerfield/WTG-02/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "bd05e9a9-686f-4005-a800-06d2c42a0544",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-10",
+    "assetProperties" : [ {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Deerfield/WTG-10/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Deerfield/WTG-10/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Deerfield/WTG-10/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Deerfield/WTG-10/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Deerfield/WTG-10/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Deerfield/WTG-10/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Deerfield/WTG-10/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Deerfield/WTG-10/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Deerfield/WTG-10/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Deerfield/WTG-10/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "5e794219-3f8f-4227-9d34-b5f922554f6b",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-08",
+    "assetProperties" : [ {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Adair/WTG-08/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Adair/WTG-08/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Adair/WTG-08/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Adair/WTG-08/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Adair/WTG-08/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Adair/WTG-08/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Adair/WTG-08/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Adair/WTG-08/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Adair/WTG-08/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Adair/WTG-08/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "b7a922f2-aee4-44f2-b207-15617b11bb18",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-05",
+    "assetProperties" : [ {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/PleasantValley/WTG-05/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/PleasantValley/WTG-05/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/PleasantValley/WTG-05/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/PleasantValley/WTG-05/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/PleasantValley/WTG-05/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/PleasantValley/WTG-05/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/PleasantValley/WTG-05/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/PleasantValley/WTG-05/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/PleasantValley/WTG-05/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/PleasantValley/WTG-05/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "9147aa42-97b3-44b3-8801-1a145d4e1036",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-02",
+    "assetProperties" : [ {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/PleasantValley/WTG-02/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/PleasantValley/WTG-02/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/PleasantValley/WTG-02/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/PleasantValley/WTG-02/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/PleasantValley/WTG-02/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/PleasantValley/WTG-02/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/PleasantValley/WTG-02/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/PleasantValley/WTG-02/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/PleasantValley/WTG-02/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/PleasantValley/WTG-02/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "b22cc8a4-04f7-4f37-bc6c-623c3a7750eb",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-07",
+    "assetProperties" : [ {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/PleasantValley/WTG-07/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/PleasantValley/WTG-07/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/PleasantValley/WTG-07/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/PleasantValley/WTG-07/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/PleasantValley/WTG-07/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/PleasantValley/WTG-07/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/PleasantValley/WTG-07/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/PleasantValley/WTG-07/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/PleasantValley/WTG-07/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/PleasantValley/WTG-07/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "2df2258d-4009-47aa-9b86-e237f164826b",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-01",
+    "assetProperties" : [ {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/PleasantValley/WTG-01/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/PleasantValley/WTG-01/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/PleasantValley/WTG-01/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/PleasantValley/WTG-01/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/PleasantValley/WTG-01/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/PleasantValley/WTG-01/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/PleasantValley/WTG-01/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/PleasantValley/WTG-01/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/PleasantValley/WTG-01/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/PleasantValley/WTG-01/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "f81ca0f4-0c06-493a-8c70-12e54a6fe64b",
+    "assetModelId" : "125c7c70-7a18-4544-b070-3eef76957d6c",
+    "assetName" : "Bethel",
+    "assetProperties" : [ ],
+    "assetHierarchies" : [ {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "d799e41d-e19b-4911-adc9-259d2e10d875"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "5a292451-10c0-498d-b5c2-52e6a4973950"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "eae481c6-e23d-4f95-b2ff-df740d088d4a"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "241d9d36-4e19-4fa1-9423-6f588e4c2412"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "f1366946-2333-4bd6-b80a-d4ac55213345"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "8f3a35dc-9fd7-4e5c-b553-ed1fc259c73d"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "ca66d5ab-dd71-42b8-8dde-828dc33b8aad"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "72c5930a-6e91-4ed1-bd98-64daed438ceb"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "1724d01c-e183-4146-9201-77c06436e27b"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "ce46ead0-6213-451d-8a69-21ae9da55bc0"
+    } ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "95247b3b-cc53-49be-b48f-fd8b8b64c817",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-07",
+    "assetProperties" : [ {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/CampSprings/WTG-07/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/CampSprings/WTG-07/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/CampSprings/WTG-07/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/CampSprings/WTG-07/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/CampSprings/WTG-07/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/CampSprings/WTG-07/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/CampSprings/WTG-07/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/CampSprings/WTG-07/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/CampSprings/WTG-07/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/CampSprings/WTG-07/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "f9492fb0-f54f-4b0f-a34c-e3a2b930d370",
+    "assetModelId" : "125c7c70-7a18-4544-b070-3eef76957d6c",
+    "assetName" : "CampSprings",
+    "assetProperties" : [ ],
+    "assetHierarchies" : [ {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "a9504517-5878-41ca-8729-653f20ac1dd5"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "4c70fc43-5749-4dae-ad54-625a3bfc2975"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "15ad48f9-4d54-4a1e-8510-7e6d521549b3"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "cb951cc0-7c16-42a1-864b-b9b30e39d7df"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "169ccc2d-7d62-4780-bc42-71aca0f58cbc"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "f43b3b87-06a6-405d-8915-b49efc14ccff"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "95247b3b-cc53-49be-b48f-fd8b8b64c817"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "4cda1509-e1b2-4b5f-8122-1df9b8c0d244"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "b5e803cc-8a8e-419a-99cd-6148bc082f2b"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "ef8c4b04-e3c4-4aa6-9227-aaad0972acfb"
+    } ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "ec3caac5-2623-4112-ae0d-58babc0901ad",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-08",
+    "assetProperties" : [ {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Deerfield/WTG-08/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Deerfield/WTG-08/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Deerfield/WTG-08/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Deerfield/WTG-08/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Deerfield/WTG-08/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Deerfield/WTG-08/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Deerfield/WTG-08/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Deerfield/WTG-08/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Deerfield/WTG-08/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Deerfield/WTG-08/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "06fd07c3-ff9a-4de8-be03-f43009d66c06",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-08",
+    "assetProperties" : [ {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Fenton/WTG-08/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Fenton/WTG-08/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Fenton/WTG-08/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Fenton/WTG-08/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Fenton/WTG-08/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Fenton/WTG-08/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Fenton/WTG-08/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Fenton/WTG-08/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Fenton/WTG-08/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Fenton/WTG-08/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "ac9fee03-215a-405e-814b-d7150c58e070",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-03",
+    "assetProperties" : [ {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/PleasantValley/WTG-03/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/PleasantValley/WTG-03/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/PleasantValley/WTG-03/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/PleasantValley/WTG-03/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/PleasantValley/WTG-03/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/PleasantValley/WTG-03/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/PleasantValley/WTG-03/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/PleasantValley/WTG-03/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/PleasantValley/WTG-03/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/PleasantValley/WTG-03/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "8dc02c07-9f85-4909-a76d-f5454f3150b3",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-03",
+    "assetProperties" : [ {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Fenton/WTG-03/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Fenton/WTG-03/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Fenton/WTG-03/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Fenton/WTG-03/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Fenton/WTG-03/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Fenton/WTG-03/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Fenton/WTG-03/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Fenton/WTG-03/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Fenton/WTG-03/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Fenton/WTG-03/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "0dcd9d0f-3c9f-4ba2-ac4c-b9e8bf010961",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-09",
+    "assetProperties" : [ {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Adair/WTG-09/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Adair/WTG-09/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Adair/WTG-09/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Adair/WTG-09/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Adair/WTG-09/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Adair/WTG-09/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Adair/WTG-09/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Adair/WTG-09/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Adair/WTG-09/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Adair/WTG-09/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "a9504517-5878-41ca-8729-653f20ac1dd5",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-03",
+    "assetProperties" : [ {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/CampSprings/WTG-03/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/CampSprings/WTG-03/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/CampSprings/WTG-03/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/CampSprings/WTG-03/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/CampSprings/WTG-03/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/CampSprings/WTG-03/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/CampSprings/WTG-03/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/CampSprings/WTG-03/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/CampSprings/WTG-03/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/CampSprings/WTG-03/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "cd73447f-36c6-4383-bb54-b4dddcce76e0",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-05",
+    "assetProperties" : [ {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Deerfield/WTG-05/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Deerfield/WTG-05/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Deerfield/WTG-05/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Deerfield/WTG-05/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Deerfield/WTG-05/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Deerfield/WTG-05/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Deerfield/WTG-05/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Deerfield/WTG-05/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Deerfield/WTG-05/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Deerfield/WTG-05/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "ce46ead0-6213-451d-8a69-21ae9da55bc0",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-03",
+    "assetProperties" : [ {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Bethel/WTG-03/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Bethel/WTG-03/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Bethel/WTG-03/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Bethel/WTG-03/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Bethel/WTG-03/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Bethel/WTG-03/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Bethel/WTG-03/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Bethel/WTG-03/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Bethel/WTG-03/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Bethel/WTG-03/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "f43b3b87-06a6-405d-8915-b49efc14ccff",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-08",
+    "assetProperties" : [ {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/CampSprings/WTG-08/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/CampSprings/WTG-08/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/CampSprings/WTG-08/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/CampSprings/WTG-08/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/CampSprings/WTG-08/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/CampSprings/WTG-08/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/CampSprings/WTG-08/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/CampSprings/WTG-08/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/CampSprings/WTG-08/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/CampSprings/WTG-08/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "169ccc2d-7d62-4780-bc42-71aca0f58cbc",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-01",
+    "assetProperties" : [ {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/CampSprings/WTG-01/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/CampSprings/WTG-01/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/CampSprings/WTG-01/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/CampSprings/WTG-01/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/CampSprings/WTG-01/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/CampSprings/WTG-01/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/CampSprings/WTG-01/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/CampSprings/WTG-01/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/CampSprings/WTG-01/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/CampSprings/WTG-01/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "51cda019-389b-41ef-9d6e-cee47e11e7c6",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-04",
+    "assetProperties" : [ {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/PleasantValley/WTG-04/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/PleasantValley/WTG-04/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/PleasantValley/WTG-04/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/PleasantValley/WTG-04/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/PleasantValley/WTG-04/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/PleasantValley/WTG-04/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/PleasantValley/WTG-04/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/PleasantValley/WTG-04/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/PleasantValley/WTG-04/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/PleasantValley/WTG-04/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "cb951cc0-7c16-42a1-864b-b9b30e39d7df",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-05",
+    "assetProperties" : [ {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/CampSprings/WTG-05/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/CampSprings/WTG-05/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/CampSprings/WTG-05/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/CampSprings/WTG-05/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/CampSprings/WTG-05/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/CampSprings/WTG-05/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/CampSprings/WTG-05/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/CampSprings/WTG-05/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/CampSprings/WTG-05/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/CampSprings/WTG-05/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "f486bb8b-8ee7-4c35-9981-bca8d1a66cbc",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-07",
+    "assetProperties" : [ {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Fenton/WTG-07/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Fenton/WTG-07/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Fenton/WTG-07/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Fenton/WTG-07/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Fenton/WTG-07/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Fenton/WTG-07/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Fenton/WTG-07/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Fenton/WTG-07/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Fenton/WTG-07/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Fenton/WTG-07/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "c4fe0a2c-36ab-4639-85d3-268b85ff1c23",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-10",
+    "assetProperties" : [ {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Adair/WTG-10/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Adair/WTG-10/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Adair/WTG-10/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Adair/WTG-10/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Adair/WTG-10/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Adair/WTG-10/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Adair/WTG-10/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Adair/WTG-10/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Adair/WTG-10/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Adair/WTG-10/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "8ab367aa-5a7a-47b5-a4aa-22902db2102d",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-04",
+    "assetProperties" : [ {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Fenton/WTG-04/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Fenton/WTG-04/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Fenton/WTG-04/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Fenton/WTG-04/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Fenton/WTG-04/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Fenton/WTG-04/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Fenton/WTG-04/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Fenton/WTG-04/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Fenton/WTG-04/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Fenton/WTG-04/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "eae481c6-e23d-4f95-b2ff-df740d088d4a",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-10",
+    "assetProperties" : [ {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Bethel/WTG-10/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Bethel/WTG-10/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Bethel/WTG-10/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Bethel/WTG-10/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Bethel/WTG-10/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Bethel/WTG-10/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Bethel/WTG-10/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Bethel/WTG-10/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Bethel/WTG-10/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Bethel/WTG-10/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "ea968cfe-1d5e-4671-8c94-8f4710e6f773",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-02",
+    "assetProperties" : [ {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Adair/WTG-02/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Adair/WTG-02/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Adair/WTG-02/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Adair/WTG-02/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Adair/WTG-02/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Adair/WTG-02/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Adair/WTG-02/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Adair/WTG-02/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Adair/WTG-02/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Adair/WTG-02/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "4cda1509-e1b2-4b5f-8122-1df9b8c0d244",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-06",
+    "assetProperties" : [ {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/CampSprings/WTG-06/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/CampSprings/WTG-06/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/CampSprings/WTG-06/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/CampSprings/WTG-06/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/CampSprings/WTG-06/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/CampSprings/WTG-06/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/CampSprings/WTG-06/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/CampSprings/WTG-06/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/CampSprings/WTG-06/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/CampSprings/WTG-06/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "9e3584dd-c466-45a8-b34c-6dae1a533617",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-06",
+    "assetProperties" : [ {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Deerfield/WTG-06/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Deerfield/WTG-06/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Deerfield/WTG-06/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Deerfield/WTG-06/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Deerfield/WTG-06/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Deerfield/WTG-06/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Deerfield/WTG-06/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Deerfield/WTG-06/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Deerfield/WTG-06/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Deerfield/WTG-06/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "03d97605-6b6c-461e-9333-0d0678c6211f",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-06",
+    "assetProperties" : [ {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/PleasantValley/WTG-06/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/PleasantValley/WTG-06/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/PleasantValley/WTG-06/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/PleasantValley/WTG-06/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/PleasantValley/WTG-06/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/PleasantValley/WTG-06/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/PleasantValley/WTG-06/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/PleasantValley/WTG-06/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/PleasantValley/WTG-06/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/PleasantValley/WTG-06/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "2354a8a4-baab-4baa-9c4d-3e68cfc9b431",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-03",
+    "assetProperties" : [ {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Adair/WTG-03/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Adair/WTG-03/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Adair/WTG-03/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Adair/WTG-03/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Adair/WTG-03/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Adair/WTG-03/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Adair/WTG-03/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Adair/WTG-03/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Adair/WTG-03/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Adair/WTG-03/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "09be53bf-41d9-4d81-9002-c4b4a3b5d427",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-03",
+    "assetProperties" : [ {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Deerfield/WTG-03/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Deerfield/WTG-03/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Deerfield/WTG-03/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Deerfield/WTG-03/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Deerfield/WTG-03/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Deerfield/WTG-03/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Deerfield/WTG-03/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Deerfield/WTG-03/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Deerfield/WTG-03/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Deerfield/WTG-03/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "ff7bd48f-ad4c-4cd6-9245-991358ecaff6",
+    "assetModelId" : "125c7c70-7a18-4544-b070-3eef76957d6c",
+    "assetName" : "Fenton",
+    "assetProperties" : [ ],
+    "assetHierarchies" : [ {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "8ab367aa-5a7a-47b5-a4aa-22902db2102d"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "06fd07c3-ff9a-4de8-be03-f43009d66c06"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "f2660283-e633-44e0-821a-862da528859c"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "8dc02c07-9f85-4909-a76d-f5454f3150b3"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "cc8095f5-36e2-499b-bd6b-caf598c4e9e3"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "6fdfbf5a-c6ad-45dd-8085-edc27dd2079d"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "465ac8ae-e1c8-4fd3-844d-eb2197198c7c"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "bae35aff-110e-46f6-b20b-c10f4efd79ac"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "f486bb8b-8ee7-4c35-9981-bca8d1a66cbc"
+    }, {
+      "id" : "e9bf6288-b256-4e21-8f48-931c457bb593",
+      "childAssetId" : "27b94f7b-6754-4229-a68f-cbffebd6e797"
+    } ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "1724d01c-e183-4146-9201-77c06436e27b",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-05",
+    "assetProperties" : [ {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Bethel/WTG-05/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Bethel/WTG-05/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Bethel/WTG-05/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Bethel/WTG-05/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Bethel/WTG-05/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Bethel/WTG-05/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Bethel/WTG-05/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Bethel/WTG-05/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Bethel/WTG-05/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Bethel/WTG-05/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "7fe6d1a0-8fde-49fe-bde4-2336743d2cb6",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-09",
+    "assetProperties" : [ {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/PleasantValley/WTG-09/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/PleasantValley/WTG-09/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/PleasantValley/WTG-09/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/PleasantValley/WTG-09/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/PleasantValley/WTG-09/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/PleasantValley/WTG-09/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/PleasantValley/WTG-09/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/PleasantValley/WTG-09/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/PleasantValley/WTG-09/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/PleasantValley/WTG-09/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "f1366946-2333-4bd6-b80a-d4ac55213345",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-02",
+    "assetProperties" : [ {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "DISABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "DISABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "DISABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "DISABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "DISABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "DISABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "DISABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "DISABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "6fdfbf5a-c6ad-45dd-8085-edc27dd2079d",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-01",
+    "assetProperties" : [ {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Fenton/WTG-01/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Fenton/WTG-01/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Fenton/WTG-01/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Fenton/WTG-01/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Fenton/WTG-01/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Fenton/WTG-01/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Fenton/WTG-01/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Fenton/WTG-01/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Fenton/WTG-01/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Fenton/WTG-01/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "8f3a35dc-9fd7-4e5c-b553-ed1fc259c73d",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-06",
+    "assetProperties" : [ {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Bethel/WTG-06/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Bethel/WTG-06/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Bethel/WTG-06/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Bethel/WTG-06/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Bethel/WTG-06/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Bethel/WTG-06/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Bethel/WTG-06/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Bethel/WTG-06/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Bethel/WTG-06/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Bethel/WTG-06/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "241d9d36-4e19-4fa1-9423-6f588e4c2412",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-09",
+    "assetProperties" : [ {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Bethel/WTG-09/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Bethel/WTG-09/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Bethel/WTG-09/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Bethel/WTG-09/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Bethel/WTG-09/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Bethel/WTG-09/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Bethel/WTG-09/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Bethel/WTG-09/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Bethel/WTG-09/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Bethel/WTG-09/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "72c5930a-6e91-4ed1-bd98-64daed438ceb",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-07",
+    "assetProperties" : [ {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Bethel/WTG-07/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Bethel/WTG-07/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Bethel/WTG-07/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Bethel/WTG-07/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Bethel/WTG-07/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Bethel/WTG-07/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Bethel/WTG-07/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Bethel/WTG-07/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Bethel/WTG-07/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Bethel/WTG-07/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "fb9d569f-5f34-4798-8eb6-67e4ed334701",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-01",
+    "assetProperties" : [ {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Adair/WTG-01/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Adair/WTG-01/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Adair/WTG-01/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Adair/WTG-01/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Adair/WTG-01/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Adair/WTG-01/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Adair/WTG-01/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Adair/WTG-01/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Adair/WTG-01/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Adair/WTG-01/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "15ad48f9-4d54-4a1e-8510-7e6d521549b3",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-04",
+    "assetProperties" : [ {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/CampSprings/WTG-04/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/CampSprings/WTG-04/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/CampSprings/WTG-04/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/CampSprings/WTG-04/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/CampSprings/WTG-04/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/CampSprings/WTG-04/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/CampSprings/WTG-04/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/CampSprings/WTG-04/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/CampSprings/WTG-04/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/CampSprings/WTG-04/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "b97993cf-2347-4c11-9f45-1b072f8513d7",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-04",
+    "assetProperties" : [ {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Deerfield/WTG-04/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Deerfield/WTG-04/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Deerfield/WTG-04/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Deerfield/WTG-04/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Deerfield/WTG-04/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Deerfield/WTG-04/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Deerfield/WTG-04/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Deerfield/WTG-04/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Deerfield/WTG-04/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Deerfield/WTG-04/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "4ab8bf20-defd-46f1-b32f-75a54f492332",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-04",
+    "assetProperties" : [ {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Adair/WTG-04/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Adair/WTG-04/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Adair/WTG-04/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Adair/WTG-04/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Adair/WTG-04/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Adair/WTG-04/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Adair/WTG-04/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Adair/WTG-04/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Adair/WTG-04/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Adair/WTG-04/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "cc8095f5-36e2-499b-bd6b-caf598c4e9e3",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-09",
+    "assetProperties" : [ {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Fenton/WTG-09/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Fenton/WTG-09/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Fenton/WTG-09/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Fenton/WTG-09/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Fenton/WTG-09/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Fenton/WTG-09/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Fenton/WTG-09/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Fenton/WTG-09/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Fenton/WTG-09/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Fenton/WTG-09/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "4c70fc43-5749-4dae-ad54-625a3bfc2975",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-09",
+    "assetProperties" : [ {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/CampSprings/WTG-09/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/CampSprings/WTG-09/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/CampSprings/WTG-09/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/CampSprings/WTG-09/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/CampSprings/WTG-09/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/CampSprings/WTG-09/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/CampSprings/WTG-09/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/CampSprings/WTG-09/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/CampSprings/WTG-09/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/CampSprings/WTG-09/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "c0d68a37-7657-400f-809e-aa6ee93b7c04",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-07",
+    "assetProperties" : [ {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Adair/WTG-07/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Adair/WTG-07/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Adair/WTG-07/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Adair/WTG-07/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Adair/WTG-07/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Adair/WTG-07/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Adair/WTG-07/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Adair/WTG-07/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Adair/WTG-07/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Adair/WTG-07/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  }, {
+    "assetId" : "ca66d5ab-dd71-42b8-8dde-828dc33b8aad",
+    "assetModelId" : "e419ec1f-3cc3-46a2-acef-0c60b22fae18",
+    "assetModelExternalId" : "Wind-Turbine-Model-123",
+    "assetName" : "WTG-04",
+    "assetProperties" : [ {
+      "id" : "ae72bdb3-9b68-4b04-a7aa-a30ee8b2f372",
+      "alias" : "/Bethel/WTG-04/RotorSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "44370c0b-1275-46e7-97a0-1b6b52df6753",
+      "alias" : "/Bethel/WTG-04/AmbientTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "a566fdf2-59e8-4fef-a8b6-1afb26bc8813",
+      "alias" : "/Bethel/WTG-04/WindDirection",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "ccd44221-5de3-431c-aa8b-3eee0bc0858a",
+      "alias" : "/Bethel/WTG-04/ActivePower",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "47261b1d-b98b-492a-bdc8-5ce3ab964a88",
+      "alias" : "/Bethel/WTG-04/BearingTemp",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "5d29669e-81c1-4b40-a792-eb609f0daf67",
+      "alias" : "/Bethel/WTG-04/GearBoxVibration",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "3b431437-cb9b-49f3-b448-fd257ad24fc2",
+      "alias" : "/Bethel/WTG-04/Energy",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "eb7b950e-ec79-42b4-b0e0-2d2fdf1f0c8c",
+      "alias" : "/Bethel/WTG-04/WindSpeed",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "f8b8a240-0465-4679-aaf4-850593750fa4",
+      "alias" : "/Bethel/WTG-04/ErrorStatus",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    }, {
+      "id" : "d7ee37f6-8b8e-4e9d-8182-75aff434d6f2",
+      "alias" : "/Bethel/WTG-04/ErrorCode",
+      "retainDataOnAliasChange" : "TRUE",
+      "propertyNotificationState" : "ENABLED"
+    } ],
+    "assetHierarchies" : [ ],
+    "tags" : [ ]
+  } ]
+}

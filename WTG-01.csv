@@ -1,0 +1,11 @@
+﻿Tag Name,Address,Data Type,Respect Data Type,Client Access,Scan Rate,Scaling,Raw Low,Raw High,Scaled Low,Scaled High,Scaled Data Type,Clamp Low,Clamp High,Eng Units,Description,Negate Value
+"ActivePower","SINE (1000, 100.000000, 2000.000000, 0.100000, 90)",Float,1,RO,100,,,,,,,,,,"",
+"AmbientTemp","RANDOM (10, 5.000000, 40.000000)",Float,1,RO,100,,,,,,,,,,"",
+"BearingTemp","SINE (1000, 60.000000, 90.000000, 0.100000, 90)",Float,1,RO,100,,,,,,,,,,"",
+"Energy","RAMP (10, 10000.000000, 100000000.000000, 0.100000)",Float,1,RO,100,,,,,,,,,,"",
+"ErrorCode","USER (1000,0)",Short,1,RO,1000,,,,,,,,,,"",
+"ErrorStatus","USER (1000,0)",Boolean,1,RO,1000,,,,,,,,,,"",
+"GearBoxVibration","SINE (1000, 1.000000, 10.000000, 0.100000, 90)",Float,1,RO,100,,,,,,,,,,"",
+"RotorSpeed","SINE (1000, 10.000000, 60.000000, 0.100000, 90)",Float,1,RO,100,,,,,,,,,,"",
+"WindDirection","SINE (1000, 0.000000, 360.000000, 0.100000, 90)",Float,1,RO,100,,,,,,,,,,"",
+"WindSpeed","SINE (1000, 3.000000, 30.000000, 0.100000, 90)",Float,1,RO,100,,,,,,,,,,"",
