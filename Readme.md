@@ -7,8 +7,8 @@ A company in the wind energy industry is facing several challenges in managing a
 
 ## Solution:
 To overcome these challenges, the company should adopt a system that leverages the aws cloud and artificial intelligence technologies to optimize the performance and maintenance of all their wind farms. The system would consist of the following components:
-- A cloud-based platform that collects, stores, and processes data from the wind turbines and the local control systems, using the aws services such as IoT SiteWise, GreenGrass, and Lambda.
-- An artificial intelligence agent to monitor wind turbine data and help the engineering personal leveraging the aws generative AI service Amazon Bedrock.
+A cloud-based platform that collects, stores, and processes data from the wind turbines and the local control systems, using the aws services such as IoT SiteWise, GreenGrass, and Lambda.
+An artificial intelligence agent to monitor wind turbine data and help the engineering personal leveraging the aws generative AI service Amazon Bedrock.
 
 - Wind Turbine PLCs data will be simulated in Kepware OPC UA Server with simulation driver.
 - Once Simulation Channel for each Wind Farm with multiple Wind Turbines will be implemented.
@@ -20,7 +20,6 @@ To overcome these challenges, the company should adopt a system that leverages t
 - The Agent will interface with IoT SiteWise through Lambda Functions.
 - Aurora PostgreSQL – Serverless Database is used as knowledge base for Amazon Bedrock Agent.
 
-## Solution Architecture for Integrating IoT SiteWise and Generative AI
 ![alt text](https://github.com/getramki/Integrating-Gen-IA-and-IoT/blob/main/images/architecture.png?raw=true)
 
 ## This Repo Contains the Following
