@@ -6,6 +6,10 @@ This repo is a demonstration of integrating Generative AI and IoT Technologies w
 A company in the wind energy industry is facing several challenges in managing and maintaining the wind turbines that generate clean and sustainable power. One of these challenges is the shortage of expert engineering resources at many wind farm sites, especially in remote and rural areas. This leads to lower efficiency and reliability of the wind turbines, higher operational and maintenance costs, and increased environmental risks due to potential failures and accidents. Moreover, the local control systems that monitor the wind turbines are often outdated and incompatible, making it difficult to collect and analyse data across different sites and regions.
 
 ## Solution:
+To overcome these challenges, the company should adopt a system that leverages the aws cloud and artificial intelligence technologies to optimize the performance and maintenance of all their wind farms. The system would consist of the following components:
+- A cloud-based platform that collects, stores, and processes data from the wind turbines and the local control systems, using the aws services such as IoT SiteWise, GreenGrass, and Lambda.
+- An artificial intelligence agent to monitor wind turbine data and help the engineering personal leveraging the aws generative AI service Amazon Bedrock.
+
 - Wind Turbine PLCs data will be simulated in Kepware OPC UA Server with simulation driver.
 - Once Simulation Channel for each Wind Farm with multiple Wind Turbines will be implemented.
 - The Simulation of Wind Farms and OPC UA is implemented in a Windows EC2 Instance.
