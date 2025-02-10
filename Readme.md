@@ -1,4 +1,3 @@
-Sure, I can help with that! Here is the content from your document in Markdown format:
 # Integrating Generative AI and IoT Technologies
 
 This repo is a demonstration of integrating Generative AI and IoT Technologies where a Gen AI Agent can read the live data from IoT and reason with it as per its knowledge base and help the Industry Maintenance Engineers.
